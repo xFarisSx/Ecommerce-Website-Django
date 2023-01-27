@@ -1,0 +1,78 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css");
+
+$body-color: #333;
+$body-bg: #fff;
+$border-radius: 0.5rem;
+$primary: #f4c430;
+$secondary: #333e48;
+
+@import "bootstrap/scss/bootstrap";
+@import "animate.css";
+@import "swiper/css/bundle";
+@import "notyf/notyf.min.css";
+@import url("https://fonts.googleapis.com/earlyaccess/notokufiarabic.css");
+@import url("https://cdn.lineicons.com/3.0/lineicons.css");
+
+// Style Bootstrap icons
+.bi {
+  fill: currentColor;
+}
+
+* {
+  font-family: "Noto Kufi Arabic", sans-serif;
+}
+
+.card {
+  border: none;
+}
+
+.card-img-overlay {
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #2f5c84d4;
+}
+
+.product:hover .card-img-overlay {
+  opacity: 1;
+}
+
+.product img {
+  max-height: 300px;
+}
+
+.main-slider {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background-color: $body-bg;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.main-slider .swiper-wrapper .swiper-slide img {
+  height: 400px;
+}
+
+.swiper-brands {
+  text-align: center;
+  overflow: hidden;
+}
+
+.swiper-product {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: $secondary;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+.navbar .dropdown-menu {
+  animation: flipInX; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.5s; /* don't forget to set a duration! */
+}

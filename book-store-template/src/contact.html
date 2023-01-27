@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" class="h-100" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>متجر كتب</title>
+  </head>
+
+  <body class="d-flex flex-column h-100 bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+      <div class="container">
+        <a class="navbar-brand" href="/"> متجر الكتب </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse mt-2 mt-lg-0"
+          id="navbarSupportedContent"
+        >
+          <form class="d-flex mx-auto">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                style="width: 400px"
+                placeholder="بحث عن منتتجات"
+              />
+              <select class="form-control" style="width: 160px">
+                <option>التصنيفات</option>
+                <option>التصنيفات</option>
+                <option>التصنيفات</option>
+                <option>التصنيفات</option>
+                <option>التصنيفات</option>
+              </select>
+              <button class="btn btn-primary" type="button">
+                <i class="lni lni-search-alt text-white"></i>
+              </button>
+            </div>
+          </form>
+          <ul class="navbar-nav my-2 my-lg-0">
+            <li class="nav-item">
+              <a href="cart.html" class="btn btn-outline-dark" type="button">
+                سلة المشتريات (0)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <div class="container">
+        <div
+          class="collapse navbar-collapse mt-2 mt-lg-0"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav my-2 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link mx-1" href="category.html" role="button">
+                برمجة
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-1" href="category.html" role="button">
+                تصميم
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-1" href="category.html" role="button">
+                ذكاء اصطناعي
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-1" href="category.html" role="button">
+                العمل الحر
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div id="googleMap" style="width: 100%; height: 400px"></div>
+      <div class="container my-5">
+        <section>
+          <div class="col-md-12 mb-5">
+            <p class="h1 text-center text-secondary">اتصل بنا</p>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="inputName" class="form-label">الاسم</label>
+                      <input type="text" class="form-control" id="inputName" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="inputEmail" class="form-label"
+                        >البريد الإلكتروني</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="inputEmail"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="inputSubject" class="form-label"
+                        >الموضوع</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputSubject"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="inputMessage" class="form-label"
+                        >الرسالة</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="inputMessage"
+                        rows="6"
+                      ></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">إرسال</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer mt-auto py-4 bg-secondary">
+      <div class="container text-center">
+        <span class="text text-light">© 2022 جميع الحقوق محفوظة.</span>
+      </div>
+    </footer>
+    <script>
+      function myMap() {
+        var mapProp = {
+          center: new google.maps.LatLng(51.508742, -0.12085),
+          zoom: 5,
+        };
+        var map = new google.maps.Map(
+          document.getElementById("googleMap"),
+          mapProp
+        );
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdMc7__pz1RhKHcZL1-X7mHpcohPboKu4&callback=myMap"></script>
+  </body>
+</html>
