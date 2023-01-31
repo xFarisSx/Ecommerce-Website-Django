@@ -21,8 +21,8 @@
         {% include 'partials/header_search.html' %}
         <ul class="navbar-nav my-2 my-lg-0">
           <li class="nav-item">
-            <a href="cart.html" class="btn btn-outline-dark" type="button">
-              {% trans 'Cart' %}(0)
+            <a href="{% url 'store.cart' %}" class="btn btn-outline-dark" type="button">
+              {% trans 'Cart' %}(<span id="cart-items-count">{{cart_products|length}}</span>)
             </a>
           </li>
         </ul>

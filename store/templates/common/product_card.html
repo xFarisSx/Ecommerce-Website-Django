@@ -9,7 +9,9 @@
     <div
       class="card-img-overlay d-flex flex-column align-items-center justify-content-center"
     >
-      <a class="btn btn-outline-light" href="product.html"
+      <a class="btn btn-outline-light"
+      onclick="cartUpdate(this)"
+      data-url="{% url 'store.cart_add' product.id %}"
         >{% trans 'Add to cart' %}</a
       >
       <a class="btn btn-outline-light mt-2" href="{% url 'store.product' product.id %}"
